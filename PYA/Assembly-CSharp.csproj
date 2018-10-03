@@ -173,8 +173,14 @@
     <Compile Include="Assets\ExteriorAssets\NGUI\Scripts\UI\UITexture.cs" />
     <Compile Include="Assets\ExteriorAssets\NGUI\Scripts\UI\UITooltip.cs" />
     <Compile Include="Assets\ExteriorAssets\NGUI\Scripts\UI\UIViewport.cs" />
-    <Compile Include="Assets\Rcs\Scripts\Actions\IAction.cs" />
+    <Compile Include="Assets\Rcs\Scripts\ActionJump.cs" />
+    <Compile Include="Assets\Rcs\Scripts\ActionMove.cs" />
+    <Compile Include="Assets\Rcs\Scripts\ActionsManager.cs" />
+    <Compile Include="Assets\Rcs\Scripts\ActionWait.cs" />
+    <Compile Include="Assets\Rcs\Scripts\IAction.cs" />
+    <Compile Include="Assets\Rcs\Scripts\LevelData.cs" />
     <Compile Include="Assets\Rcs\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Rcs\Scripts\PhysicData.cs" />
     <Compile Include="Assets\Rcs\Scripts\Player.cs" />
     <None Include="Assets\ExteriorAssets\NGUI\ReadMe - 3.12.0.txt" />
     <None Include="Assets\ExteriorAssets\NGUI\Resources\Shaders\Unlit - Transparent Masked 1.shader" />

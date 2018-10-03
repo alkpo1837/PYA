@@ -3,37 +3,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+//[RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
+    [Header("DBG")]
+    public float DBGMoveValue = 50.0f;
+
     private Rigidbody _rigidbody;
     private bool _isMoving = false;
 
     private void Update()
     {
-        if (_isMoving == true)
-        {
-            transform.localPosition += Vector3.right * 250.0f * Time.deltaTime;
-        }
-
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.localPosition += Vector3.right * 10.0f * Time.deltaTime;
+            transform.localPosition += Vector3.right * DBGMoveValue * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.localPosition += Vector3.left * 10.0f * Time.deltaTime;
+            transform.localPosition += Vector3.left * DBGMoveValue * Time.deltaTime;
         }
     }
 
-    public void DebugGoRight()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        _isMoving = true;
-    }
+        Debug.Log(gameObject + " Trigger ented = " + other.name);
 
-    private void OnTriggerEnter(Collider other)
-    {
         if (other.tag == "Objective")
         {
             FinishLevel();
@@ -43,7 +38,10 @@ public class Player : MonoBehaviour
     private void FinishLevel()
     {
         Debug.Log(gameObject + " : objective FOUND !");
+    }
 
-        _isMoving = false;
+    public void PlayAction(IAction action)
+    {
+        action.Play(this);
     }
 }

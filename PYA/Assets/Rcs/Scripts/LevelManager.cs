@@ -11,6 +11,11 @@ public class LevelManager : MonoBehaviour
     [Header("Elements")]
     public UIWidget PlayButton;
 
+    public delegate void SequenceCallback();
+
+    public event SequenceCallback OnSequenceSucceed = null;
+    public event SequenceCallback OnSequenceFailed = null;
+
     private void Start()
     {
         UIEventListener.Get(PlayButton.gameObject).onClick = ClickOnPlayButton;
@@ -18,6 +23,19 @@ public class LevelManager : MonoBehaviour
 
     private void ClickOnPlayButton(GameObject go)
     {
-        PlayerI.DebugGoRight();
+        startSequence();
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            startSequence();
+        }
+    }
+
+    private void startSequence()
+    {
+        ActionsManager.Instance.Play();
     }
 }
