@@ -6,6 +6,8 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [Header("References")]
+    public UIPanel LevelPanel;
+    public UIPanel ActionEditorPanel;
     public Player PlayerI;
 
     [Header("Elements")]
@@ -28,9 +30,16 @@ public class LevelManager : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyUp(KeyCode.P))
+        if (Input.GetKeyUp(KeyCode.L))
         {
-            startSequence();
+            LevelPanel.alpha = 1.0f;
+            ActionEditorPanel.alpha = 0.0f;
+        }
+        
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            LevelPanel.alpha = 0.0f;
+            ActionEditorPanel.alpha = 1.0f;
         }
     }
 

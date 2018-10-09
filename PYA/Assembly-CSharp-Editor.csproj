@@ -146,6 +146,14 @@
     <Compile Include="Assets\ExteriorAssets\NGUI\Scripts\Editor\UIWidgetContainerEditor.cs" />
     <Compile Include="Assets\ExteriorAssets\NGUI\Scripts\Editor\UIWidgetInspector.cs" />
     <Compile Include="Assets\ExteriorAssets\NGUI\Scripts\Editor\UIWrapContentEditor.cs" />
+    <Compile Include="Assets\ExteriorAssets\UNotes\Editor\UNote.cs" />
+    <Compile Include="Assets\ExteriorAssets\UNotes\Editor\UNoteEditWindow.cs" />
+    <Compile Include="Assets\ExteriorAssets\UNotes\Editor\UNotesAbout.cs" />
+    <Compile Include="Assets\ExteriorAssets\UNotes\Editor\UNotesHInventory.cs" />
+    <Compile Include="Assets\ExteriorAssets\UNotes\Editor\UNotesOptionsWindow.cs" />
+    <Compile Include="Assets\ExteriorAssets\UNotes\Editor\UNotesTestingWindow.cs" />
+    <Compile Include="Assets\ExteriorAssets\UNotes\Editor\UNotesUtils.cs" />
+    <Compile Include="Assets\ExteriorAssets\UNotes\Editor\UNotesWindow.cs" />
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/monsi/Documents/PYA/PYA/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
